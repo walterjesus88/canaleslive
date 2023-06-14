@@ -18,8 +18,8 @@ jobs:
 
     - name: Confirmar y empujar los cambios
       run: |
-        git config --global user.name "Nombre de Usuario"
-        git config --global user.email "correo@ejemplo.com"
+        git config --global user.name "walterjesus88"
+        git config --global user.email "wjesus88@gmail.com"
         git add .
         git commit -m "Actualizaciones automáticas"
         git push
