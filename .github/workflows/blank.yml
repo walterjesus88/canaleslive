@@ -1,0 +1,25 @@
+name: Ejecución Automática
+
+on:
+  schedule:
+    - cron: "19 18 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
+
+    - name: Ejecutar tus comandos
+      run: |
+        # Agrega aquí los comandos que deseas ejecutar
+
+    - name: Confirmar y empujar los cambios
+      run: |
+        git config --global user.name "Nombre de Usuario"
+        git config --global user.email "correo@ejemplo.com"
+        git add .
+        git commit -m "Actualizaciones automáticas"
+        git push
