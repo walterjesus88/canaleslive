@@ -1,25 +1,23 @@
-name: Ejecución Automática
+name: Subir Excel
 
 on:
-  schedule:
-    - cron: "19 18 * * *"
+  push:
+    paths:
+      - canales_live.csv
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del repositorio
-      uses: actions/checkout@v2
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
 
-    - name: Ejecutar tus comandos
-      run: |
-        # Agrega aquí los comandos que deseas ejecutar
+      - name: Subir archivo Excel
+        run: |
+          git config --global user.name "walterjesus88"
+          git config --global user.email "wjesus88@gmail.com"
+          git add archivo.xlsx
+          git commit -m "Subir archivo Excel"
+          git push
 
-    - name: Confirmar y empujar los cambios
-      run: |
-        git config --global user.name "walterjesus88"
-        git config --global user.email "wjesus88@gmail.com"
-        git add .
-        git commit -m "Actualizaciones automáticas"
-        git push
