@@ -5,6 +5,9 @@ on:
     paths:
       - canales_live.csv
 
+  schedule:
+    - cron: "0 0 * * *"
+    
 jobs:
   build:
     runs-on: ubuntu-latest
