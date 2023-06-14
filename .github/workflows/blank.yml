@@ -6,8 +6,8 @@ on:
       - canales_live.csv
 
   schedule:
-    - cron: "0 0 * * *"
-    
+    - cron: "40 18 * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.name "walterjesus88"
           git config --global user.email "wjesus88@gmail.com"
-          git add archivo.xlsx
+          git add canales_live.csv
           git commit -m "Subir archivo Excel"
           git push
 
