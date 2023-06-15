@@ -22,8 +22,7 @@ jobs:
 
       - name: Sobrescribir archivo Excel
         run: |
-          cp canales_live.csv $GITHUB_WORKSPACE
-          cd $GITHUB_WORKSPACE
+          
           git add canales_live.csv
           git commit -m "Subir archivo Excel"
           git push origin HEAD:main
