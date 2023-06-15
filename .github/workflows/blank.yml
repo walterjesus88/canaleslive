@@ -2,7 +2,7 @@ name: Subir Excel Automáticamente
 
 on:
   schedule:
-    - cron: "51 20 * * *"
+    - cron: "57 20 * * *"
 
   push:
     branches:
@@ -22,8 +22,8 @@ jobs:
           git config --local user.email "wjesus88@gmail.com"
           git config --local user.name "walterjesus88"
      
-          git add --all
+          git add -f --all
           git commit -m "Subir archivo Excel"
-          git push origin/main
+          git push -f origin main
         
 
