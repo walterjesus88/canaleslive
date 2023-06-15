@@ -24,6 +24,6 @@ jobs:
      
           git add canales_live.csv
           git commit -m "Subir archivo Excel"
-          git push
+          git push origin/main
         
 
