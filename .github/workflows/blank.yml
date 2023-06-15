@@ -2,7 +2,7 @@ name: Subir Excel Automáticamente
 
 on:
   schedule:
-    - cron: "10 20 * * *"
+    - cron: "17 20 * * *"
 
   push:
     branches:
@@ -26,6 +26,6 @@ jobs:
           else
             git add canales_live.csv
             git commit -m "Subir archivo Excel"
-            git push origin main
+            git push origin HEAD:main
           fi
 
