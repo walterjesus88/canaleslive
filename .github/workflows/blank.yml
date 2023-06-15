@@ -22,8 +22,8 @@ jobs:
           git config --local user.email "wjesus88@gmail.com"
           git config --local user.name "walterjesus88"
      
-          git add -f --all
-          git commit -m "Subir archivo Excel"
-          git push -f origin main
+          git add  --all
+          git commit -m "Sujjj"
+          git push -f  origin main
         
 
